@@ -45,9 +45,7 @@ public class GRPCClientService {
 		return resp;
     }
     public String multiply(){
-		ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost",9090)
-		.usePlaintext()
-		.build();
+		ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost",9090).usePlaintext().build();
 		MatrixServiceGrpc.MatrixServiceBlockingStub stub
 		 = MatrixServiceGrpc.newBlockingStub(channel);
 		MatrixReply A=stub.multiplyBlock(MatrixRequest.newBuilder()
