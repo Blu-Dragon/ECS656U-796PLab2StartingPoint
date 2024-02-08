@@ -51,15 +51,15 @@ public class GRPCClientService {
 		MatrixServiceGrpc.MatrixServiceBlockingStub stub
 		 = MatrixServiceGrpc.newBlockingStub(channel);
 		MatrixReply multiplyBlock(MatrixRequest.newBuilder()
-			.setA00(1)
-			.setA01(2)
-			.setA10(5)
-			.setA11(6)
-			.setB00(1)
-			.setB01(2)
-			.setB10(5)
-			.setB11(6)
-			.build());
+					  .setA00(1)
+					  .setA01(2)
+					  .setA10(5)
+					  .setA11(6)
+					  .setB00(1)
+					  .setB01(2)
+					  .setB10(5)
+					  .setB11(6)
+					  .build());
 		String resp= A.getC00()+" "+A.getC01()+"<br>"+A.getC10()+" "+A.getC11()+"\n";
 		return resp;
  }
